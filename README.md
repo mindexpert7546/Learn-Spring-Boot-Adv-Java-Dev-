@@ -157,6 +157,8 @@ Dependency for xml
 
 Configuration code - Default response will be json based on the parameter will be change. 
 
+Reference - https://spring.io/blog/2013/05/11/content-negotiation-using-spring-mvc
+
 ```
 package com.spring.learn.springbootintro.config;
 
@@ -186,5 +188,28 @@ public class WebConfig implements WebMvcConfigurer {
     <version>2.20.1</version>
 </dependency>
 ```
+### Data Filtering in RESTFul Services 
+
+use 
+```
+@JsonIgnore
+private String department;
+```
+
+in case of multiple property ignore 
+use 
+```
+@JsonIgnoreProperties({"emaiId"})
+```
+@JsonIgnoreProperties({"emaiId"})
+public class Employee {
+}
+
+### API Versioning
+- Path versioning (Most use) end point of api will be like - v1/api
+- QueryParams
+- HTTP Headers
+
+reference - https://spring.io/blog/2025/09/16/api-versioning-in-spring
 
 
