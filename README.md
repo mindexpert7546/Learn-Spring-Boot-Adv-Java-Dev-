@@ -212,4 +212,19 @@ public class Employee {
 
 reference - https://spring.io/blog/2025/09/16/api-versioning-in-spring
 
+### Spring Data JPA with Spring Boot 
+JPA Stands for - Java Persistence API
+JPA Defines the specification. 
+
+We use ORM further use to store data from object format to table format. 
+For ORM we use Hibernate 
+
+Default JPA used Hibernate framework. 
+
+If work with JPA - 
+
+We work with Entity it's nothing it's POJO @Entity -> properties - @Id
+
+To get the more advantage of JPA use creating the Reporitory it's extends JPAReporitory < Entity, Id)
+
 
