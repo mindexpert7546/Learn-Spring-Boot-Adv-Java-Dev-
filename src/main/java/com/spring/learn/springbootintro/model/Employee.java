@@ -1,10 +1,16 @@
 package com.spring.learn.springbootintro.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties({"emaiId"})
 public class Employee {
     private String employeeId;
     private String fistName;
     private String lastName;
     private String emaiId;
+
+    @JsonIgnore
     private String department;
 
     public String getEmployeeId() {
