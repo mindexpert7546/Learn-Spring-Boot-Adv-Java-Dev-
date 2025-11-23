@@ -102,7 +102,14 @@ depdenency -
 #### Which is the default Spring Boot Server?
 - Tomcat
 
+### Web Services 
+If any web application able to use other web application over the internet that is web service
 
+Based on the contract between application data can be share between the app. this is how web services works. 
+
+Using http protocol
+
+HTTP Methods - GET, POST, PUT, DELETE
 
 
 
