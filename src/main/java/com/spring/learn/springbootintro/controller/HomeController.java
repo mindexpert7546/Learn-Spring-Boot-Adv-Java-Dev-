@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class HomeController {
 
-    @RequestMapping("/")
+    @RequestMapping("/v1")
     public String home(){
         return "Hello world";
     }
@@ -22,10 +22,10 @@ public class HomeController {
         return user;
     }
 
-    @GetMapping("/{id}")
-    public String pathVariable( @PathVariable String id){
-        return "The path variable is : " + id;
-    }
+//    @GetMapping("/{id}")
+//    public String pathVariable( @PathVariable String id){
+//        return "The path variable is : " + id;
+//    }
 
     @GetMapping("/requestParam")
     public String requestParams(@RequestParam String name, @RequestParam(required = false) String email){
