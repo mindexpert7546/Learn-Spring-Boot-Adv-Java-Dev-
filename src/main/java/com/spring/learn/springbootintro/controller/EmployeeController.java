@@ -1,0 +1,35 @@
+package com.spring.learn.springbootintro.controller;
+
+import com.spring.learn.springbootintro.model.Employee;
+import com.spring.learn.springbootintro.service.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/employee")
+public class EmployeeController {
+
+    @Autowired
+    EmployeeService employeeService;
+
+    @PostMapping()
+    public Employee save(@RequestBody Employee employee){
+        return employeeService.save(employee);
+    }
+
+    @GetMapping
+    public List<Employee> getAllEmployee(){
+        return employeeService.getAllEmployee();
+    }
+    @GetMapping("/{id}")
+    public Employee getEmployee(@PathVariable String id){
+        return employeeService.getEmployee(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteEmployee(@PathVariable String id){
+        return employeeService.deleteEmployeeById(id);
+    }
+}
