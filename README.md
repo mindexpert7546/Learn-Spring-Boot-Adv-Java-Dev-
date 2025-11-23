@@ -9,5 +9,103 @@ Dependency Injection (DI) in Spring Boot is a core principle and a design patter
 #### Spring Initializr 
 Spring Initializr is a website or web-based tool used to set up Spring Boot projects in an easier and efficient manner. Spring Boot projects can be set up manually, but the configuration might be time-consuming and confusing.
 
-By default spring boot runing via Tomcat server on 8080 port. 
+By default spring boot runing via Tomcat server on 8080 port. http://localhost:8080/
+
+### Create first Hello World API 
+```
+package com.spring.learn.springbootintro.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+@ResponseBody
+public class HomeController {
+
+    @RequestMapping("/")
+    public String home(){
+        return "Hello world";
+    }
+}
+```
+
+@Controller - Tell us this is Controller 
+@ResponseBody - It's defining how the response will be rather than creating any view.
+
+#### Embedded Servers
+Applicaiton -> war -> Server (Tomcat, Weblogic, Jboss)
+
+But in Spring boot Application + Server running via jar file that's single jar file which containe server
+
+in Spring boot there are three types of Server - Tomcat (default) , Jetty, Undertow..etc. 
+
+#### How to run the server on other server apart from tomcat - 
+
+```
+Exclude first tomcat
+
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+Add the jetty
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jetty</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+```
+
+#### Spring boot Actuator 
+
+In Spring Boot, an Actuator refers to a sub-project that provides production-ready features for monitoring and managing your application. It exposes operational information about the running application, making it easier to understand its health, performance, and internal state without requiring extensive custom development.
+
+Dependency 
+```
+<dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+```
+
+Exposing 1 endpoint beneath base path '/actuator'
+
+url - http://localhost:8080/actuator
+
+#### Spring Boot DevTool
+This is developer tool - It helps to inhenace the develeopment, whenever change any code no need to again build and run it will do authomatic. 
+
+depdenency - 
+```
+<dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+```
+
+#### How to create a Spring Boot Project?
+- Spring CLI
+- IDE Project templates
+- Spring Initializr
+
+#### Which is the default Spring Boot Server?
+- Tomcat
+
+
+
+
+
+
+
 
