@@ -148,7 +148,10 @@ public String requestParams(@RequestParam String name, @RequestParam(required = 
 ```
 Reference - https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-methods/requestparam.html
 
-
+### Content Negotiation  - JSON / XML
+The way - 
+1. Parameters
+2. Http Headers
 
 
 
