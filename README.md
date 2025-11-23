@@ -227,4 +227,6 @@ We work with Entity it's nothing it's POJO @Entity -> properties - @Id
 
 To get the more advantage of JPA use creating the Reporitory it's extends JPAReporitory < Entity, Id)
 
+### Exception Handling 
+https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc
 
