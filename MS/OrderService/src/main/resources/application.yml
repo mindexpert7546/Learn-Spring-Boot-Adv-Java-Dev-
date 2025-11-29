@@ -1,8 +1,8 @@
 spring:
   application:
-    name: ProductService
+    name: OrderService
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:3306/productdb?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/orderdb?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: Krishna7546@#
     driver-class-name: com.mysql.jdbc.Driver
@@ -14,7 +14,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
 server:
-  port: 8080
+  port: 8082
 
 eureka:
   instance:

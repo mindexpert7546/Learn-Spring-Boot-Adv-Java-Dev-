@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ProductService
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false # Prevents the Eureka server from registering itself with the registry
+    fetch-registry: false # Prevents the Eureka server from trying to fetch the registry from itself
