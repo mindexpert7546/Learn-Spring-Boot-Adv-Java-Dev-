@@ -28,4 +28,5 @@ public class ProductController {
         ProductResponse productResponse = productService.getProductById(productId);
         return new ResponseEntity<>(productResponse, HttpStatus.OK);
     }
+    
 }
