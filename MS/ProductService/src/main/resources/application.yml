@@ -2,16 +2,16 @@ spring:
   application:
     name: ProductService
   datasource:
-    url: jdbc:mysql://localhost:3306/testtest?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/productdb?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: Krishna7546@#
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.MySQLDialect
 server:
-  port: 8081
+  port: 8080
